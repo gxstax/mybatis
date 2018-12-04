@@ -26,11 +26,16 @@ public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
         //CityDao dao = (CityDao) Proxy.newProxyInstance(MybatisTest.class.getClassLoader(), new Class[]{CityDao.class}, new MyInvocationHandler());
         //dao.query();
         BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(CityDao.class);
-//        builder.addConstructorArgReference("cityDao");
         GenericBeanDefinition beanDefinition = (GenericBeanDefinition) builder.getBeanDefinition();
-        System.out.println(beanDefinition.getBeanClass().getName());
+        //2.使用bd的特性直接给class新增加一个构造方法
         beanDefinition.getConstructorArgumentValues().addGenericArgumentValue("com.dao.CityDao");
+        /**
+         * 3.为了能够动态处理，我们这边使用FactoryBean,动态处理类对象
+         */
         beanDefinition.setBeanClass(MyFactoryBean.class);
+        /**
+         * 4.使用spring的注册器我们的生成的类对象放入到map中，交给我么spring管理
+         */
         registry.registerBeanDefinition("cityDao", beanDefinition);
     }
 }

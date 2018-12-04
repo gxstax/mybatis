@@ -4,6 +4,8 @@ import com.dao.CityDao;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
@@ -14,7 +16,7 @@ import java.lang.reflect.Proxy;
  * @Version 1.0
  */
 
-public class MyFactoryBean implements FactoryBean{
+public class MyFactoryBean implements FactoryBean,InvocationHandler{
 
     private Class clazz;
     public MyFactoryBean(Class clazz){
@@ -24,12 +26,18 @@ public class MyFactoryBean implements FactoryBean{
     @Override
     public Object getObject() throws Exception {
         Class[] clazzs = new Class[]{clazz};
-        Object obj = Proxy.newProxyInstance(this.getClass().getClassLoader(), clazzs, new MyInvocationHandler());
+        Object obj = Proxy.newProxyInstance(this.getClass().getClassLoader(), clazzs, this);
         return obj;
     }
 
     @Override
     public Class<?> getObjectType() {
         return clazz;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("proxxxy");
+        return null;
     }
 }

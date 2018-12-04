@@ -1,5 +1,6 @@
 package com.config;
 
+import com.util.AntScan;
 import com.util.MyImportBeanDefinitionRegistrar;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -22,7 +23,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ComponentScan("com")
-@Import(MyImportBeanDefinitionRegistrar.class)
+@AntScan
 //@MapperScan("com.dao")
 public class AppConfig {
 
