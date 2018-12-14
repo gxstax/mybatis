@@ -1,7 +1,9 @@
 package com.service;
 
-import com.mapper.CityDao;
+import com.mapper.CityMapper;
+import com.mapper.CityMapper1;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
@@ -13,14 +15,21 @@ import java.util.Map;
  * @datetime 2018/10/24 14:16
  * @Version 1.0
  */
-
+@Service
 public class CityService {
 
     @Autowired
-    public CityDao cityDao;
+    public CityMapper cityMapper;
+
+//    @Autowired
+//    public CityMapper1 cityMapper1;
 
     public void query() {
-        List<Map<String, Object>> cityLst = cityDao.query();
+        List<Map<String, Object>> cityLst = cityMapper.query();
         System.out.println(cityLst.toString());
+    }
+
+    public void update() {
+        cityMapper.update();
     }
 }

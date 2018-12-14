@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ant-mybatis-demo" />
+        <module name="mybatis-cacheAndlogging" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ant-mybatis-demo" target="1.7" />
       <module name="mybatis" target="1.7" />
+      <module name="mybatis-cache-and-logging" target="1.7" />
+      <module name="mybatis-cacheAndlogging" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

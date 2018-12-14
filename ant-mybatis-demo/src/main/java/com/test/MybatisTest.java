@@ -1,13 +1,8 @@
 package com.test;
 
 import com.config.AppConfig;
-import com.dao.CityDao;
-import com.service.CityService;
-import com.util.MyInvocationHandler;
+import com.mapper.CityDao;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Proxy;
 
 /**
  * @author gaoxx gaoxx@fxiaoke.com
@@ -18,8 +13,8 @@ import java.lang.reflect.Proxy;
  */
 public class MybatisTest {
     public static void main(String[] args) {
-//        CityDao dao = (CityDao) Proxy.newProxyInstance(MybatisTest.class.getClassLoader(), new Class[]{CityDao.class}, new MyInvocationHandler());
-//        dao.query();
+//        CityDao mapper = (CityDao) Proxy.newProxyInstance(MybatisTest.class.getClassLoader(), new Class[]{CityDao.class}, new MyInvocationHandler());
+//        mapper.query();
         AnnotationConfigApplicationContext act = new AnnotationConfigApplicationContext(AppConfig.class);
         CityDao dao = (CityDao) act.getBean("cityDao");
         dao.query();

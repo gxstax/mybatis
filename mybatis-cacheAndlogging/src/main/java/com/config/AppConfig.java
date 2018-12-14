@@ -1,15 +1,12 @@
 package com.config;
 
 import com.util.AntScan;
-import com.util.MyImportBeanDefinitionRegistrar;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
@@ -21,10 +18,10 @@ import javax.sql.DataSource;
  * @datetime 2018/10/23 19:56
  * @Version 1.0
  */
+//@AntScan
 @Configuration
 @ComponentScan("com")
-@AntScan
-//@MapperScan("com.mapper")
+@MapperScan("com.mapper")
 public class AppConfig {
 
     @Bean
@@ -44,8 +41,8 @@ public class AppConfig {
     @Bean
     public DataSource dataSource () {
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-        driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
         driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/mybatisTest");
+        driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
         driverManagerDataSource.setUsername("root");
         driverManagerDataSource.setPassword("root");
 
