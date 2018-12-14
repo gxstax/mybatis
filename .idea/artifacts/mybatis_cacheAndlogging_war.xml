@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mybatis-cacheAndlogging:war">
+    <output-path>$PROJECT_DIR$/mybatis-cacheAndlogging/target</output-path>
+    <root id="archive" name="mybatis-cacheAndlogging.war">
+      <element id="artifact" artifact-name="mybatis-cacheAndlogging:war exploded" />
+    </root>
+  </artifact>
+</component>
