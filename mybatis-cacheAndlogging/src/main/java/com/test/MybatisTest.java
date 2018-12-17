@@ -16,15 +16,18 @@ public class MybatisTest {
 //        CityMapper mapper = (CityMapper) Proxy.newProxyInstance(MybatisTest.class.getClassLoader(), new Class[]{CityMapper.class}, new MyInvocationHandler());
 //        mapper.query();
 
+//        org.apache.ibatis.logging.LogFactory.useLog4JLogging();
         AnnotationConfigApplicationContext act = new AnnotationConfigApplicationContext(AppConfig.class);
-        //第一次查询
-        CityService service = act.getBean(CityService.class);
-        service.query();
-        //修改
-        CityService service1 = act.getBean(CityService.class);
-        service1.update();
-        //第二次查询
-        CityService service2 = act.getBean(CityService.class);
-        service2.query();
+
+        act.start();
+//        //第一次查询
+//        CityService service = act.getBean(CityService.class);
+//        service.query();
+//        //修改
+//        CityService service1 = act.getBean(CityService.class);
+//        service1.update();
+//        //第二次查询
+//        CityService service2 = act.getBean(CityService.class);
+//        service2.query();
     }
 }

@@ -35,6 +35,11 @@ public class MyFactoryBean implements FactoryBean, InvocationHandler{
     }
 
     @Override
+    public boolean isSingleton() {
+        return false;
+    }
+
+    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Method method1 = proxy.getClass().getInterfaces()[0].getMethod(method.getName());
         Select select = method1.getAnnotation(Select.class);

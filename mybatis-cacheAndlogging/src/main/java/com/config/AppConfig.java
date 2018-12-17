@@ -1,6 +1,5 @@
 package com.config;
 
-import com.util.AntScan;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +21,19 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan("com")
 @MapperScan("com.mapper")
+//@PropertySource("classpath:/log4j.properties")
 public class AppConfig {
 
     @Bean
     @Autowired
     public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+
+        //添加Mybatis的日志打印
+//        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+//        configuration.setLogImpl(Log4jImpl.class);
+//        sqlSessionFactoryBean.setConfiguration(configuration);
+
         sqlSessionFactoryBean.setDataSource(dataSource);
         return sqlSessionFactoryBean;
     }

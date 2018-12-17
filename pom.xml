@@ -25,17 +25,17 @@
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>3.4.5</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.0.4</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.mybatis</groupId>-->
+      <!--<artifactId>mybatis</artifactId>-->
+      <!--<version>3.4.5</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>mysql</groupId>-->
+      <!--<artifactId>mysql-connector-java</artifactId>-->
+      <!--<version>5.0.4</version>-->
+    <!--</dependency>-->
   </dependencies>
 
   <build>
