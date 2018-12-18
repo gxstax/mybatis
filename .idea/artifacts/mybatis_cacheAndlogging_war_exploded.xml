@@ -7,12 +7,12 @@
           <element id="module-output" name="mybatis-cacheAndlogging" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.0.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.0.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.4.5" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.3.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.8.RELEASE" />

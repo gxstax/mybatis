@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ant-mybatis-demo/ant-mybatis-demo.iml" filepath="$PROJECT_DIR$/ant-mybatis-demo/ant-mybatis-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis.iml" filepath="$PROJECT_DIR$/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-cache-source/mybatis-cache-source.iml" filepath="$PROJECT_DIR$/mybatis-cache-source/mybatis-cache-source.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-cacheAndlogging/mybatis-cacheAndlogging.iml" filepath="$PROJECT_DIR$/mybatis-cacheAndlogging/mybatis-cacheAndlogging.iml" />
     </modules>
   </component>
